@@ -4,8 +4,7 @@ venv/
 __pycache__/
 *.pyc
 .pytest_cache/
-index/*
-!index/.gitkeep
 logs/
 frontend/node_modules/
 # frontend/dist is committed on purpose: the server serves it, so deploys don't need Node.
+models/

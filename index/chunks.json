@@ -1,0 +1,408 @@
+[
+ {
+  "id": 0,
+  "text": "[About Me]\nI'm M Faizan, an AI Engineer based in Islamabad, Pakistan. I graduated from IUIC Islamabad with a Bachelor's degree in Computer Science (BSCS).\n\nI started my career in web development. My first role was as a Frontend Developer Intern at Mediatainment, and after that I worked as a MERN Stack Intern at Comrex Pvt Ltd, where I built full-stack web applications.\n\nToday I work as an AI Engineer at Business Analytics, where I focus on building AI-powered solutions.\n\nOutside of work, I love hiking and playing cricket.\n\nMy time at university gave me a strong foundation in programming, data structures, and problem-solving. It was during my degree that I first became curious about how software could do more than follow fixed rules, and that curiosity is what eventually pulled me toward artificial intelligence.",
+  "source": "About Me.docx",
+  "title": "About Me",
+  "section": "About Me"
+ },
+ {
+  "id": 1,
+  "text": "[About Me]\nStarting out in web development taught me a lot about building things people actually use. Working on frontends showed me how much a clean, simple interface matters, and working across the MERN stack taught me how the pieces of an application connect, from the database to the browser. Those lessons still shape how I build AI tools today, because a smart system is only useful if people can work with it easily.\n\nMoving into AI felt like a natural next step. I enjoy the challenge of turning messy, real-world problems into working solutions, and I like that the field keeps changing, which means there's always something new to learn. I'm always trying to grow my skills and stay up to date with the latest tools and techniques.\n\nWhen I'm not working, you'll usually find me outdoors. Hiking around the hills near Islamabad is my favorite way to clear my head, and cricket has been a part of my life for as long as I can remember, whether I'm playing with friends or following a match. I believe a good balance between work and the things I enjoy keeps me focused and motivated.",
+  "source": "About Me.docx",
+  "title": "About Me",
+  "section": "About Me"
+ },
+ {
+  "id": 2,
+  "text": "[About Me]\nMy best friend is Bilal. Like me, he comes from Gujrat; his village is Thutha Rai Bahadar, and he belongs to the Raja family. From 2015 to 2022 he lived close to my home, so for seven years he was never more than a short walk away. Living so near each other meant we spent a huge part of our lives together, seeing each other almost every day, sharing ordinary moments that only became special when I looked back on them later. One of our favorite things to do together was going out on photo shoots, finding great spots and spending hours trying to capture awesome pictures. Those shoots were always full of laughter, experimenting with angles and ideas, and the photos we took are some of my best memories of our friendship. Over those years he became much more than a neighbor or a friend; he became someone I could talk to about anything, whether it was something serious on my mind or just a silly joke. Bilal is a genuinely good person: kind, honest, and dependable, the kind of friend who shows up when you need him without being asked. Having someone from the same roots as me made our bond even stronger, because we understood each other in a way that didn’t need much explaining.",
+  "source": "About Me.docx",
+  "title": "About Me",
+  "section": "About Me"
+ },
+ {
+  "id": 3,
+  "text": "[About Me]\nLife has moved us in different directions since then, and we don’t get to see each other as often as we used to, which is why I really miss him. Even so, I know some friendships stay with you no matter how much time or distance passes, and ours is one of them. Whenever someone asks me about the people who matter most in my life, Bilal is always one of the first names that comes to mind. If you want to connect with him call him at Instagram or facebook.",
+  "source": "About Me.docx",
+  "title": "About Me",
+  "section": "About Me"
+ },
+ {
+  "id": 4,
+  "text": "[Certifications and Achievements > Overview]\nAlongside my BSCS degree from IUIC Islamabad, I've earned certifications in generative AI, Python, and front-end web development. They reflect my path from web development into AI, and my habit of continuously learning new skills.",
+  "source": "Certifications and Achievements.pdf",
+  "title": "Certifications and Achievements",
+  "section": "Overview"
+ },
+ {
+  "id": 5,
+  "text": "[Certifications and Achievements > Generative AI]\nBuild Your Generative AI Productivity Skills with Microsoft\n\nIssued by: Microsoft and LinkedIn Learning\n\nYear: 2025\n\nWhat I learned: How to use generative AI tools to work more productively, including writing effective prompts and applying AI to everyday tasks.\n\nCareer Essentials in Generative AI by Microsoft\n\nIssued by: Microsoft and LinkedIn Learning\n\nYear: 2026\n\nWhat I learned: The core concepts of generative AI, how it works, its real-world uses, and the ethical considerations of using AI responsibly.",
+  "source": "Certifications and Achievements.pdf",
+  "title": "Certifications and Achievements",
+  "section": "Generative AI"
+ },
+ {
+  "id": 6,
+  "text": "[Certifications and Achievements > Python and Data Science]\nPython for Data Science, AI & Development\n\nIssued by: IBM, via Coursera\n\nYear: 2026\n\nWhat I learned: Python fundamentals for data science and AI, including data types, functions, working with data using libraries like Pandas and NumPy, and accessing APIs.\n\nPython Data Structures\n\nIssued by: University of Michigan, via Coursera\n\nYear: 2026\n\nWhat I learned: Core Python data structures such as strings, lists, dictionaries, and tuples, and how to use them to process and analyze data.",
+  "source": "Certifications and Achievements.pdf",
+  "title": "Certifications and Achievements",
+  "section": "Python and Data Science"
+ },
+ {
+  "id": 7,
+  "text": "[Certifications and Achievements > Web Development]\nMeta Professional Program in Front-End Web Development\n\nIssued by: Meta via Coursera\n\nYear: 2024\n\nWhat I learned: Professional front-end development with HTML, CSS, JavaScript, and React, including responsive design, UX/UI principles, and building complete web applications. This program supported my work as a Frontend Developer Intern at Mediatainment.",
+  "source": "Certifications and Achievements.pdf",
+  "title": "Certifications and Achievements",
+  "section": "Web Development"
+ },
+ {
+  "id": 8,
+  "text": "[Certifications and Achievements > English Language]\nIELTS (International English Language Testing System)\n\nIssued by: British Council\n\nScore: Overall band 7\n\nYear: 2026\n\nWhat it shows: Strong English skills in listening, reading, writing, and speaking, suitable for professional work and study abroad.",
+  "source": "Certifications and Achievements.pdf",
+  "title": "Certifications and Achievements",
+  "section": "English Language"
+ },
+ {
+  "id": 9,
+  "text": "[Certifications and Achievements > Other Achievements]\nCompleted my Final Year Project, an AI-Driven Auction App, as part of my BSCS degree.\n\nBuilt a multilingual RAG system that answers questions in English, German, and Urdu.",
+  "source": "Certifications and Achievements.pdf",
+  "title": "Certifications and Achievements",
+  "section": "Other Achievements"
+ },
+ {
+  "id": 10,
+  "text": "[Contact and Links > How to Reach Me]\nI'm M Faizan, an AI Engineer based in Islamabad, Pakistan. I'm always happy to connect with people who are interested in AI, software engineering, collaboration, or job opportunities. The best way to reach me is by email or through LinkedIn, and I usually reply within 1–2 days.",
+  "source": "Contact and Links.pdf",
+  "title": "Contact and Links",
+  "section": "How to Reach Me"
+ },
+ {
+  "id": 11,
+  "text": "[Contact and Links > Contact Details]\nEmail: faizanfazi@gmail.com\n\nLinkedIn: linkedin.com/in/muhammad-faizan-a28882278\n\nLocation: Islamabad, Pakistan",
+  "source": "Contact and Links.pdf",
+  "title": "Contact and Links",
+  "section": "Contact Details"
+ },
+ {
+  "id": 12,
+  "text": "[Contact and Links > Links]\nGitHub: github.com/fazich21\n\nPortfolio website: portfolio-cyan-eta-18.vercel.app",
+  "source": "Contact and Links.pdf",
+  "title": "Contact and Links",
+  "section": "Links"
+ },
+ {
+  "id": 13,
+  "text": "[Contact and Links > What You Can Contact Me About]\nJob opportunities and roles in AI engineering or software development\n\nFreelance or collaboration on AI, web, or mobile projects\n\nQuestions about my projects, such as RAG systems or Flutter apps\n\nNetworking with people in tech and startups",
+  "source": "Contact and Links.pdf",
+  "title": "Contact and Links",
+  "section": "What You Can Contact Me About"
+ },
+ {
+  "id": 14,
+  "text": "[Contact and Links > Availability]\nI'm currently working full-time as an AI Engineer at Business Analytics. I'm open / not currently open to new opportunities and collaborations.",
+  "source": "Contact and Links.pdf",
+  "title": "Contact and Links",
+  "section": "Availability"
+ },
+ {
+  "id": 15,
+  "text": "[Contact and Links > Note for the Chatbot]\nIf someone asks for personal details that aren't listed here, such as a phone number or home address, politely say I don't share those publicly and point them to my email or LinkedIn instead.",
+  "source": "Contact and Links.pdf",
+  "title": "Contact and Links",
+  "section": "Note for the Chatbot"
+ },
+ {
+  "id": 16,
+  "text": "[Frequently Asked Questions > About Me]\nQ: Who are you? A: I'm M Faizan, an AI Engineer based in Islamabad, Pakistan. I build AI-powered solutions, especially systems that use large language models and RAG.\n\nQ: Where are you from? A: I'm originally from Gujrat, and I currently live and work in Islamabad.\n\nQ: Where did you study? A: I graduated from IUIC Islamabad with a Bachelor's degree in Computer Science (BSCS).\n\nQ: What languages do you speak? A: I speak Urdu natively and English fluently, with an IELTS band score of 7.",
+  "source": "FAQ.docx",
+  "title": "Frequently Asked Questions",
+  "section": "About Me"
+ },
+ {
+  "id": 17,
+  "text": "[Frequently Asked Questions > Work and Experience]\nQ: Where do you work? A: I work as an AI Engineer at Business Analytics.\n\nQ: What do you do as an AI Engineer? A: I build AI systems that help turn large amounts of documents and data into useful answers. Most of my work involves Retrieval-Augmented Generation (RAG), large language models, and the backends that serve them.\n\nQ: What was your work experience before this? A: I started in web development. I was a Frontend Developer Intern at Mediatainment, and then a MERN Stack Intern at Comrex Pvt Ltd, where I built full-stack web applications.\n\nQ: How did you move from web development into AI? A: I was always curious about how software could do more than follow fixed rules. After working on web and mobile apps, I started building AI projects like a voice assistant and an AI-driven auction app, and that pulled me fully into AI.",
+  "source": "FAQ.docx",
+  "title": "Frequently Asked Questions",
+  "section": "Work and Experience"
+ },
+ {
+  "id": 18,
+  "text": "[Frequently Asked Questions > Skills and Projects]\nQ: What are your main skills? A: My strongest skills are Python, RAG systems, and working with LLMs. I also build mobile apps in Flutter and web apps with React and the MERN stack, and I build APIs with FastAPI.\n\nQ: What was your final year project? A: My FYP was an AI-Driven Auction App, built with Flutter for the mobile app and Python for the AI part.\n\nQ: What is your best project? A: My multilingual RAG system. It answers questions from documents in English, German, and Urdu, using hybrid search, reranking, and cited answers, and it includes a security layer against prompt injection.\n\nQ: Do you build mobile apps? A: Yes. I've built several Flutter apps, including a video calling app, an expense tracker, a weather app, a to-do app, and my AI-driven auction app.\n\nQ: Can I see your code? A: Yes, you can find my projects on GitHub at github.com/your-username.",
+  "source": "FAQ.docx",
+  "title": "Frequently Asked Questions",
+  "section": "Skills and Projects"
+ },
+ {
+  "id": 19,
+  "text": "[Frequently Asked Questions > Goals and Personal Life]\nQ: What are your goals? A: I want to become a professional software engineer and, one day, start my own technology company that builds products to solve real problems.\n\nQ: What do you do in your free time? A: I love hiking, playing cricket, and going on photo shoots with friends to take great pictures.\n\nQ: Who is your best friend? A: My best friend is Bilal. He's also from Gujrat, and we lived near each other from 2015 to 2022. He's a genuinely good person, and I really miss spending time with him. he is raja from thutha ray bahadur.",
+  "source": "FAQ.docx",
+  "title": "Frequently Asked Questions",
+  "section": "Goals and Personal Life"
+ },
+ {
+  "id": 20,
+  "text": "[Frequently Asked Questions > Working Together]\nQ: Are you open to job opportunities or freelance work? A: I'm open to opportunities in AI engineering and software development, as well as freelance and collaboration projects.\n\nQ: How can I contact you? A: The best way to reach me is by email at your-email@example.com or on LinkedIn at linkedin.com/in/muhammad-faizan-a28882278.\n\nQ: Can I get your phone number or address? A: I don't share my phone number or address publicly, but you can reach me anytime by email or LinkedIn.\n\nQ: Are you a real person or a bot? A: This is an AI chatbot that answers questions about M Faizan based on information he provided. For anything it can't answer, please contact him directly by email or LinkedIn.",
+  "source": "FAQ.docx",
+  "title": "Frequently Asked Questions",
+  "section": "Working Together"
+ },
+ {
+  "id": 21,
+  "text": "[Goals and Interests > My Goals]\nMy main goal is to become a professional software engineer and, one day, to build my own company. I started my journey in web and mobile development, and today I work as an AI Engineer at Business Analytics. Each step has taught me something new, and I see all of it as preparation for the bigger things I want to build.\n\nIn the near term, I want to keep growing as an engineer by working on real-world problems, writing clean and reliable code, and getting better at building complete products from start to finish. I want to deepen my skills in AI, especially in large language models and RAG systems, while staying strong in software engineering fundamentals like system design, testing, and good architecture.\n\nIn the long term, I want to start my own technology company. My dream is to build products that solve real problems for people and businesses, and to create a place where talented people can grow and do meaningful work. Working across AI, backend, web, and mobile has shown me how the different pieces of a product fit together, which is exactly the kind of experience I believe a founder needs.",
+  "source": "Goals and Interests.docx",
+  "title": "Goals and Interests",
+  "section": "My Goals"
+ },
+ {
+  "id": 22,
+  "text": "[Goals and Interests > My Goals]\nI'm also planning to pursue a Master's degree in AI or NLP to strengthen my technical foundation.",
+  "source": "Goals and Interests.docx",
+  "title": "Goals and Interests",
+  "section": "My Goals"
+ },
+ {
+  "id": 23,
+  "text": "[Goals and Interests > What Drives Me]\nI enjoy turning ideas into working products. There's something satisfying about starting with a problem, figuring out a solution, and seeing people actually use what I built. I also like that technology, and AI in particular, keeps changing, so there is always something new to learn. That constant learning is a big part of what keeps me motivated.",
+  "source": "Goals and Interests.docx",
+  "title": "Goals and Interests",
+  "section": "What Drives Me"
+ },
+ {
+  "id": 24,
+  "text": "[Goals and Interests > Professional Interests]\nArtificial Intelligence: especially large language models, RAG systems, and AI agents.\n\nBuilding products: taking an idea from concept to something people can use.\n\nEntrepreneurship: learning how startups are built, grown, and run.\n\nMobile and web development: creating clean, simple, user-friendly apps.",
+  "source": "Goals and Interests.docx",
+  "title": "Goals and Interests",
+  "section": "Professional Interests"
+ },
+ {
+  "id": 25,
+  "text": "[Goals and Interests > Personal Interests]\nHiking: exploring the hills around Islamabad is my favorite way to clear my head and recharge.\n\nCricket: it has been part of my life for as long as I can remember, whether playing with friends or following a match.\n\nPhotography: I love going on photo shoots with friends and experimenting with angles and ideas to capture great pictures.",
+  "source": "Goals and Interests.docx",
+  "title": "Goals and Interests",
+  "section": "Personal Interests"
+ },
+ {
+  "id": 26,
+  "text": "[Muhammad Faizan > PROFESSIONAL SUMMARY]\nAspiring Software Developer with hands-on experience in Flutter and a foundational understanding of web development. Eager to expand my expertise into areas such as Artificial Intelligence and full-stack web development. Passionate about learning new technologies and building innovative solutions in a dynamic and growth-oriented environment.",
+  "source": "Muhammad_Faizan_CV_chatbot.pdf",
+  "title": "Muhammad Faizan",
+  "section": "PROFESSIONAL SUMMARY"
+ },
+ {
+  "id": 27,
+  "text": "[Muhammad Faizan > EDUCATION]\nBachelor of Science in Computer Science\n\nIqra University, Islamabad\n\nSep 2021 – 2025 Cgpa 3.31",
+  "source": "Muhammad_Faizan_CV_chatbot.pdf",
+  "title": "Muhammad Faizan",
+  "section": "EDUCATION"
+ },
+ {
+  "id": 28,
+  "text": "[Muhammad Faizan > Projects]\nAI-Driven Auction App (Final Year Project)\n\nDesigned and developed an AI-powered auction platform featuring dynamic pricing predictions, real-time bid optimization, and AR-based item visualization for an immersive and efficient bidding experience. Digital Marketing Website (HTML + CSS + JavaScript + GSAP)\n\nDeveloped a responsive and visually engaging digital marketing website using HTML, CSS, and JavaScript, enhanced with GSAP for smooth animations and interactive user experience. The site includes dynamic sections such as Services, About Us, and Contact, designed for performance, SEO optimization, and cross-device compatibility.\n\nWeather App (Flutter)\n\nBuilt a weather forecasting app allowing users to fetch real-time weather data based on location input.\n\nExpense Tracker App (Flutter)",
+  "source": "Muhammad_Faizan_CV_chatbot.pdf",
+  "title": "Muhammad Faizan",
+  "section": "Projects"
+ },
+ {
+  "id": 29,
+  "text": "[Muhammad Faizan > Projects]\nBuilt a user-friendly mobile application using Flutter to help users manage and track their daily expenses. The app features intuitive UI, real-time data updates, and visual representations such as bar and pie charts. Integrated local storage using Hive for offline functionality, and included features like income input, categorized expense entries, and detailed transaction history for efficient personal finance management.",
+  "source": "Muhammad_Faizan_CV_chatbot.pdf",
+  "title": "Muhammad Faizan",
+  "section": "Projects"
+ },
+ {
+  "id": 30,
+  "text": "[Muhammad Faizan > Skills]\nProgramming Languages\n\nC++ Java Python dart\n\nMobile Development\n\nFlutter Dart Android studio",
+  "source": "Muhammad_Faizan_CV_chatbot.pdf",
+  "title": "Muhammad Faizan",
+  "section": "Skills"
+ },
+ {
+  "id": 31,
+  "text": "[Muhammad Faizan > Certification]\n1. Meta Professional Program in Front- End Web Development Meta via Coursera\n\nVerify Certificate\n\n2. Career Essentials in Generative AI by Microsoft Verify Certificate 3. Build Your Generative AI Productivity Skills with Microsoft Verify Certificate\n\nWorked on freelance projects, delivering customized mobile apps based on client needs. Skilled in understanding requirements, designing user-friendly interfaces, and optimizing app performance. Strong communicator with a focus on clean, maintainable code. Also experienced in spin bowling, reflecting a passion for cricket and teamwork.\n\nLinkedIn: Muhammad Faizan",
+  "source": "Muhammad_Faizan_CV_chatbot.pdf",
+  "title": "Muhammad Faizan",
+  "section": "Certification"
+ },
+ {
+  "id": 32,
+  "text": "[My Projects > 1. AI-Driven Auction App (Final Year Project)]\nWhat it does: A mobile auction platform where users can list items, place bids, and follow auctions in real time. AI features such as price prediction for listed items, recommendations, or fraud detection help buyers and sellers make better decisions.\n\nTech used: Flutter for the mobile app, Python for the AI models and backend, Firebase / FastAPI / Flask, database name.\n\nMy role: This was my Final Year Project at IUIC. I built the Flutter app and the AI module / led the team of X members.\n\nResult: Completed and presented as my FYP, grade or outcome. It taught me how to combine mobile development with machine learning in one product.",
+  "source": "My Projects.pdf",
+  "title": "My Projects",
+  "section": "1. AI-Driven Auction App (Final Year Project)"
+ },
+ {
+  "id": 33,
+  "text": "[My Projects > 2. Multilingual RAG System (English, German, Urdu)]\nWhat it does: A Retrieval-Augmented Generation system that answers questions from a collection of documents in English, German, and Urdu, with citations pointing to the source.\n\nTech used: Python, FastAPI, FAISS, BM25 hybrid search, cross-encoder reranking, Hugging Face embedding models, Groq LLM API, React.\n\nMy role: I built the full pipeline myself: document ingestion with OCR and language detection, chunking, hybrid search, reranking, answer generation, and a security layer against prompt injection.\n\nResult: A working end-to-end system that handles questions across three languages and returns cited answers.",
+  "source": "My Projects.pdf",
+  "title": "My Projects",
+  "section": "2. Multilingual RAG System (English, German, Urdu)"
+ },
+ {
+  "id": 34,
+  "text": "[My Projects > 3. E-Scooter Website]\nWhat it does: A website for an e-scooter rental / sales business where users can browse scooters, view details and prices, and book or contact the business.\n\nTech used: React, CSS / Tailwind.\n\nMy role: I designed and built the frontend.\n\nResult: A responsive, modern website that works on desktop and mobile.",
+  "source": "My Projects.pdf",
+  "title": "My Projects",
+  "section": "3. E-Scooter Website"
+ },
+ {
+  "id": 35,
+  "text": "[My Projects > 4. Chat Application]\nWhat it does: A real-time chat app where users can sign up, find others, and exchange messages instantly.\n\nTech used: React, Node.js, Express, MongoDB, Socket.io / Firebase.\n\nMy role: I built the full stack / the frontend and real-time messaging.\n\nResult: Messages are delivered instantly between users, and the project gave me hands- on experience with real-time communication.",
+  "source": "My Projects.pdf",
+  "title": "My Projects",
+  "section": "4. Chat Application"
+ },
+ {
+  "id": 36,
+  "text": "[My Projects > 5. Video Calling App]\nWhat it does: A mobile app for one-to-one and group video calls.\n\nTech used: Flutter, Agora / WebRTC / ZegoCloud, Firebase.\n\nMy role: I built the app, including the call interface and the video calling integration.\n\nResult: A working app with smooth video and audio calls.",
+  "source": "My Projects.pdf",
+  "title": "My Projects",
+  "section": "5. Video Calling App"
+ },
+ {
+  "id": 37,
+  "text": "[My Projects > 6. Expense Tracker]\nWhat it does: A mobile app for recording daily expenses, sorting them into categories, and viewing spending summaries with charts.\n\nTech used: Flutter, SQLite / Hive / Firebase.\n\nMy role: I designed and built the entire app.\n\nResult: A simple tool that makes it easy to see where money goes each month.",
+  "source": "My Projects.pdf",
+  "title": "My Projects",
+  "section": "6. Expense Tracker"
+ },
+ {
+  "id": 38,
+  "text": "[My Projects > 7. Weather App]\nWhat it does: Shows current weather and forecasts for any city, including temperature, humidity, and conditions.\n\nTech used: Flutter, OpenWeatherMap API.\n\nMy role: I built the app and integrated the live weather API.\n\nResult: A clean app showing real-time weather data, which helped me learn how to work with REST APIs in Flutter.",
+  "source": "My Projects.pdf",
+  "title": "My Projects",
+  "section": "7. Weather App"
+ },
+ {
+  "id": 39,
+  "text": "[My Projects > 8. To-Do App]\nWhat it does: Lets users add, edit, complete, and delete tasks to stay organized.\n\nTech used: Flutter, local storage such as Hive / SQLite.\n\nMy role: I built the entire app.\n\nResult: A lightweight productivity app that saves tasks on the device.",
+  "source": "My Projects.pdf",
+  "title": "My Projects",
+  "section": "8. To-Do App"
+ },
+ {
+  "id": 40,
+  "text": "[My Projects > 9. Jarvis (Python Voice Assistant)]\nWhat it does: A desktop voice assistant inspired by Jarvis that listens to voice commands and performs tasks like opening websites and apps, searching Wikipedia, telling the time, playing music.\n\nTech used: Python, SpeechRecognition, pyttsx3, Wikipedia API.\n\nMy role: I built it as a personal project.\n\nResult: A working assistant that responds to spoken commands, and one of the first projects that sparked my interest in AI.",
+  "source": "My Projects.pdf",
+  "title": "My Projects",
+  "section": "9. Jarvis (Python Voice Assistant)"
+ },
+ {
+  "id": 41,
+  "text": "[Opinions and Personality > My Personality]\nI'm a curious and practical person. I like understanding how things work, but I care even more about making them work in the real world. I'm calm and patient when solving problems, and I enjoy breaking a big, messy challenge into small steps until it's solved. I'm friendly and easy to talk to, and I value loyalty in friendships; the people close to me matter a lot to me.",
+  "source": "Opinions and Personality.pdf",
+  "title": "Opinions and Personality",
+  "section": "My Personality"
+ },
+ {
+  "id": 42,
+  "text": "[Opinions and Personality > How I Like to Work]\nLearning by building: I learn best by starting a project and figuring things out along the way, rather than only reading theory.\n\nEnd-to-end ownership: I like being involved in every part of a product, from the AI and backend to the interface people use.\n\nSimple over complicated: I prefer clean, simple solutions that are easy to maintain over clever ones that are hard to understand.\n\nSteady improvement: I'd rather ship a working first version and improve it than wait for something perfect.\n\nTeamwork: I enjoy working with people who share knowledge openly and help each other grow.",
+  "source": "Opinions and Personality.pdf",
+  "title": "Opinions and Personality",
+  "section": "How I Like to Work"
+ },
+ {
+  "id": 43,
+  "text": "[Opinions and Personality > My Views on AI]\nI believe AI is one of the most important technologies of our time, and that its real value comes from solving practical problems for people and businesses, not from hype. I think systems like RAG are powerful because they ground AI answers in real information instead of guesswork. I also believe AI should be built responsibly: safe, honest about what it doesn't know, and protective of people's privacy. That's why I put effort into security layers that guard against things like prompt injection and leaking personal data.",
+  "source": "Opinions and Personality.pdf",
+  "title": "Opinions and Personality",
+  "section": "My Views on AI"
+ },
+ {
+  "id": 44,
+  "text": "[Opinions and Personality > My Views on Technology and Careers]\nI think the best engineers never stop learning, because technology changes so fast that yesterday's skills aren't enough tomorrow. I believe strong fundamentals in programming and problem-solving matter more than knowing any single tool. I also think Pakistan has a lot of tech talent, and I'd love to be part of building products and companies that compete globally.",
+  "source": "Opinions and Personality.pdf",
+  "title": "Opinions and Personality",
+  "section": "My Views on Technology and Careers"
+ },
+ {
+  "id": 45,
+  "text": "[Opinions and Personality > Favorites]\nFavorite programming language: Python, for how quickly I can turn an idea into something that works.\n\nFavorite area of tech: AI, especially large language models and RAG.\n\nFavorite framework for apps: Flutter / React\n\nFavorite outdoor activity: Hiking\n\nFavorite sport: Cricket\n\nFavorite cricket team or player: Australia\n\nFavorite food: Biryani\n\nFavorite place I've hiked: Trail 7 margalla Hills",
+  "source": "Opinions and Personality.pdf",
+  "title": "Opinions and Personality",
+  "section": "Favorites"
+ },
+ {
+  "id": 46,
+  "text": "[Opinions and Personality > A Few Things About Me]\nI enjoy capturing moments through photography, especially on shoots with friends.\n\nTime outdoors helps me clear my head and come back to problems with fresh ideas.\n\nI'm motivated by the idea of one day building my own company.\n\nEnjoy with Best Friends",
+  "source": "Opinions and Personality.pdf",
+  "title": "Opinions and Personality",
+  "section": "A Few Things About Me"
+ },
+ {
+  "id": 47,
+  "text": "[Skills and Tools > Overview]\nI'm M Faizan, an AI Engineer who started in web and mobile development. My strongest skills today are in Python and AI, especially Retrieval-Augmented Generation (RAG) and working with large language models. I also have solid experience building mobile apps in Flutter and web apps with React and the MERN stack, so I can take an AI idea all the way to a working product that people can use.",
+  "source": "Skills and Tools.pdf",
+  "title": "Skills and Tools",
+  "section": "Overview"
+ },
+ {
+  "id": 48,
+  "text": "[Skills and Tools > Programming Languages]\nPython: Advanced. My main language for AI work, backends, and automation.\n\nJavaScript: Intermediate. Used in React and MERN stack projects.\n\nDart: Intermediate. Used for all my Flutter apps.\n\nC++: Intermediate. Learned during my degree; good grasp of fundamentals and problem-solving.\n\nHTML and CSS: Intermediate. For building and styling web interfaces.",
+  "source": "Skills and Tools.pdf",
+  "title": "Skills and Tools",
+  "section": "Programming Languages"
+ },
+ {
+  "id": 49,
+  "text": "[Skills and Tools > AI, Machine Learning and NLP]\nRetrieval-Augmented Generation (RAG): Advanced. Built a multilingual RAG system with hybrid search, reranking, cited answers, and Graph RAG.\n\nLarge Language Models (LLMs): Advanced. Prompt design and integration with APIs like Groq and Gemini.\n\nEmbeddings and vector search: Advanced. Benchmarked embedding models (BGE, E5, Instructor) and vector databases.\n\nNLP: Intermediate. Language detection, named entity recognition with spaCy, and multilingual text in English, German, and Urdu.\n\nHugging Face Transformers: Intermediate. Using pretrained models for classification, reranking, and embeddings.\n\nAI safety for LLM apps: Intermediate. Detecting prompt injection, jailbreaks, toxic content, and personal data.\n\nMulti-agent systems: Beginner. Currently building my first agent-based system.",
+  "source": "Skills and Tools.pdf",
+  "title": "Skills and Tools",
+  "section": "AI, Machine Learning and NLP"
+ },
+ {
+  "id": 50,
+  "text": "[Skills and Tools > AI Libraries and Tools]\nFAISS, Chroma, Milvus: Advanced / Intermediate. Vector databases for semantic search.\n\nsentence-transformers and cross-encoders: Intermediate. For embeddings and reranking.\n\nBM25 (rank_bm25): Intermediate. Keyword search combined with vector search.\n\nspaCy and NetworkX: Intermediate. Entity extraction and knowledge graphs.\n\nOCR tools: Intermediate. Extracting text from scanned documents.\n\nLangChain / LlamaIndex: Beginner. I usually build RAG components directly in Python.",
+  "source": "Skills and Tools.pdf",
+  "title": "Skills and Tools",
+  "section": "AI Libraries and Tools"
+ },
+ {
+  "id": 51,
+  "text": "[Skills and Tools > Backend and APIs]\nFastAPI: Advanced. Built REST APIs for serving AI systems.\n\nFlask: Intermediate. Used for document processing pipelines.\n\nNode.js and Express: Intermediate. Backends for MERN stack apps.\n\nREST APIs: Advanced. Building and consuming APIs across web, mobile, and AI projects.",
+  "source": "Skills and Tools.pdf",
+  "title": "Skills and Tools",
+  "section": "Backend and APIs"
+ },
+ {
+  "id": 52,
+  "text": "[Skills and Tools > Mobile Development]\nFlutter: Intermediate to Advanced. Built several apps including an AI-driven auction app (my FYP), a video calling app, an expense tracker, a weather app, and a to-do app.\n\nFirebase: Intermediate. Authentication and real-time data for mobile apps.",
+  "source": "Skills and Tools.pdf",
+  "title": "Skills and Tools",
+  "section": "Mobile Development"
+ },
+ {
+  "id": 53,
+  "text": "[Skills and Tools > Web Development]\nReact: Intermediate. Built an e-scooter website, a chat application, and the interface for my RAG system.\n\nMERN stack (MongoDB, Express, React, Node.js): Intermediate. Gained during my internship at Comrex Pvt Ltd.\n\nTailwind CSS: Intermediate. For fast, responsive styling.\n\nFrontend development: Intermediate. Gained during my internship at Mediatainment.",
+  "source": "Skills and Tools.pdf",
+  "title": "Skills and Tools",
+  "section": "Web Development"
+ },
+ {
+  "id": 54,
+  "text": "[Skills and Tools > Databases]\nMongoDB: Intermediate.\n\nSQLite / Hive: Intermediate. Local storage in Flutter apps.\n\nVector databases: Advanced. FAISS, Chroma, Milvus.",
+  "source": "Skills and Tools.pdf",
+  "title": "Skills and Tools",
+  "section": "Databases"
+ },
+ {
+  "id": 55,
+  "text": "[Skills and Tools > Developer Tools]\nGit and GitHub: Intermediate. Version control for all my projects.\n\nVS Code: Advanced. My main editor.\n\nPython virtual environments and pip: Advanced.\n\nPostman: Intermediate. Testing APIs.\n\nTesting with pytest: Intermediate. Wrote over 100 tests for my RAG security layer.",
+  "source": "Skills and Tools.pdf",
+  "title": "Skills and Tools",
+  "section": "Developer Tools"
+ },
+ {
+  "id": 56,
+  "text": "[Skills and Tools > Languages I Speak]\nEnglish: Fluent. IELTS band 7.\n\nUrdu: Native.\n\nPunjabi: Fluent",
+  "source": "Skills and Tools.pdf",
+  "title": "Skills and Tools",
+  "section": "Languages I Speak"
+ },
+ {
+  "id": 57,
+  "text": "[Skills and Tools > Soft Skills]\nProblem-solving and breaking big problems into small steps.\n\nLearning new tools quickly, which helped me move from web development into AI.\n\nBuilding end-to-end: I can work on the AI, the backend, and the user interface.\n\nTeamwork and communication, built through internships and university projects.",
+  "source": "Skills and Tools.pdf",
+  "title": "Skills and Tools",
+  "section": "Soft Skills"
+ }
+]

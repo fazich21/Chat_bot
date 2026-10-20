@@ -107,17 +107,23 @@ class Retriever:
                                                  "chunks": len(chunks)}, indent=1))
         return cls(chunks, vectors, embedder, reranker), report
 
+    @staticmethod
+    def index_is_fresh() -> bool:
+        """True if index/ exists and was built from the current files in data/."""
+        if not (INDEX_FILE.exists() and CHUNKS_FILE.exists() and MANIFEST_FILE.exists()):
+            return False
+        return json.loads(MANIFEST_FILE.read_text()).get("fingerprint") == data_fingerprint()
+
     @classmethod
     def load_or_build(cls, embedder=None, reranker=None) -> "Retriever":
         """Load the saved index if data/ hasn't changed; otherwise rebuild it."""
         embedder = embedder or Embedder()
         if reranker is None and config.USE_RERANKER:
             reranker = Reranker()
-        if INDEX_FILE.exists() and CHUNKS_FILE.exists() and MANIFEST_FILE.exists():
-            manifest = json.loads(MANIFEST_FILE.read_text())
-            if manifest.get("fingerprint") == data_fingerprint():
-                chunks = [Chunk(**c) for c in json.loads(CHUNKS_FILE.read_text(encoding="utf-8"))]
-                return cls(chunks, np.load(INDEX_FILE), embedder, reranker)
+        if cls.index_is_fresh():
+            chunks = [Chunk(**c) for c in json.loads(CHUNKS_FILE.read_text(encoding="utf-8"))]
+            return cls(chunks, np.load(INDEX_FILE), embedder, reranker)
+        if INDEX_FILE.exists():
             print("Data changed since the last build: rebuilding the index...")
         retriever, report = cls.build(embedder, reranker)
         for warning in report.warnings():
