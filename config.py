@@ -10,7 +10,10 @@ load_dotenv()
 BASE_DIR = Path(__file__).resolve().parent
 DATA_DIR = BASE_DIR / "data"            # your documents (.pdf, .docx, .md, .txt)
 INDEX_DIR = BASE_DIR / "index"          # generated search index
-MODEL_DIR = BASE_DIR / "models"         # downloaded search models (cached)
+# Downloaded search models. On Vercel the project folder is read-only and size-limited, so the
+# model is downloaded to /tmp when the app starts instead of being bundled with the code.
+ON_VERCEL = bool(os.getenv("VERCEL"))
+MODEL_DIR = Path("/tmp/fastembed_models") if ON_VERCEL else BASE_DIR / "models"
 LOG_DIR = BASE_DIR / "logs"             # question log
 PROMPT_FILE = BASE_DIR / "prompts" / "system_prompt.txt"
 

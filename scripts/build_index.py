@@ -51,6 +51,10 @@ def main():
 
     if Retriever.index_is_fresh() and not args & {"--force", "--show"}:
         print("Index is up to date with data/: nothing to rebuild.")
+        if config.ON_VERCEL:
+            # Don't bundle the model (size limit): the app downloads it to /tmp when it starts.
+            print("On Vercel: the search model will be downloaded when the app starts.")
+            return
         Embedder().encode(["warm up"])          # make sure the model is downloaded
         print("Embedding model ready.")
     else:
