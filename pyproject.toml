@@ -1,8 +1,20 @@
-# Settings for deploying on Vercel (ignored when you run the app on your own computer).
+# Project settings. Vercel installs the dependencies listed here (it ignores requirements.txt
+# when this file exists), so keep this list in sync with requirements.txt.
 [project]
 name = "ask-faizan"
 version = "1.0.0"
 requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn>=0.30",
+    "groq>=1.0",
+    "fastembed>=0.7",
+    "rank-bm25>=0.2.2",
+    "pymupdf>=1.24",
+    "python-docx>=1.1",
+    "numpy",
+    "python-dotenv",
+]
 
 [tool.vercel]
 entrypoint = "api:app"            # the FastAPI app in api.py
