@@ -38,9 +38,13 @@ def main():
     if "--check" in args:
         return
 
-    from src.retriever import Retriever
+    import config
+    from src.retriever import Reranker, Retriever
     Retriever.build()
     print("Index saved to index/.")
+    if config.USE_RERANKER:  # download the reranker now too, so the server starts quickly
+        Reranker().score("warm up", ["warm up"])
+        print("Reranker model ready.")
 
 
 if __name__ == "__main__":

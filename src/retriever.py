@@ -2,18 +2,18 @@
 
 Pipeline for every question:
   1. Rewrite it to match the documents ("his interests" -> "my interests") and add synonyms.
-  2. Hybrid search: dense vectors (FAISS, meaning) + BM25 (exact words), fused with RRF.
+  2. Hybrid search: dense vectors (meaning) + BM25 (exact words), fused with RRF.
   3. Re-rank the top candidates with a cross-encoder, which reads question and chunk together
      and is much more accurate than either search alone.
   4. Add neighbouring pieces of split sections, then order the context by document.
 
 The index is saved to index/ and rebuilt automatically whenever a file in data/ changes.
+Models run with fastembed (ONNX, no PyTorch), so the whole app fits in ~512 MB of memory.
 """
 import json
 import re
 from dataclasses import dataclass
 
-import faiss
 import numpy as np
 from rank_bm25 import BM25Okapi
 
@@ -22,7 +22,7 @@ from src import query as query_prep
 from src.chunking import Chunk
 from src.ingest import DataReport, data_fingerprint, load_chunks
 
-INDEX_FILE = config.INDEX_DIR / "faiss.index"
+INDEX_FILE = config.INDEX_DIR / "vectors.npy"
 CHUNKS_FILE = config.INDEX_DIR / "chunks.json"
 MANIFEST_FILE = config.INDEX_DIR / "manifest.json"
 
@@ -41,19 +41,21 @@ def tokenize(text: str) -> list[str]:
 
 
 class Embedder:
-    """sentence-transformers bi-encoder, loaded once and only when first needed."""
+    """bge-small embedding model (ONNX via fastembed), loaded once and only when first needed."""
 
     def __init__(self, model_name: str = config.EMBED_MODEL, query_prefix: str = config.QUERY_PREFIX):
         self.model_name, self.query_prefix, self._model = model_name, query_prefix, None
 
     def encode(self, texts: list[str], is_query: bool = False) -> np.ndarray:
         if self._model is None:
-            from sentence_transformers import SentenceTransformer
-            self._model = SentenceTransformer(self.model_name)
+            from fastembed import TextEmbedding
+            self._model = TextEmbedding(self.model_name, cache_dir=str(config.MODEL_DIR),
+                                        threads=config.MODEL_THREADS)
         if is_query:
             texts = [self.query_prefix + t for t in texts]
-        vectors = self._model.encode(texts, normalize_embeddings=True, show_progress_bar=False)
-        return np.asarray(vectors, dtype="float32")
+        vectors = np.asarray(list(self._model.embed(texts, batch_size=16)), dtype="float32")
+        norms = np.linalg.norm(vectors, axis=1, keepdims=True)
+        return vectors / np.where(norms == 0, 1, norms)
 
 
 class Reranker:
@@ -64,9 +66,10 @@ class Reranker:
 
     def score(self, question: str, passages: list[str]) -> list[float]:
         if self._model is None:
-            from sentence_transformers import CrossEncoder
-            self._model = CrossEncoder(self.model_name)
-        raw = np.asarray(self._model.predict([(question, p) for p in passages]), dtype="float64")
+            from fastembed.rerank.cross_encoder import TextCrossEncoder
+            self._model = TextCrossEncoder(self.model_name, cache_dir=str(config.MODEL_DIR),
+                                           threads=config.MODEL_THREADS)
+        raw = np.asarray(list(self._model.rerank(question, passages)), dtype="float64")
         if raw.min() < 0 or raw.max() > 1:      # model returned logits: squash to 0..1
             raw = 1 / (1 + np.exp(-raw))
         return raw.tolist()
@@ -79,9 +82,9 @@ class Hit:
 
 
 class Retriever:
-    def __init__(self, chunks: list[Chunk], index: faiss.Index, embedder, reranker=None):
+    def __init__(self, chunks: list[Chunk], vectors: np.ndarray, embedder, reranker=None):
         self.chunks = chunks
-        self.index = index
+        self.vectors = vectors          # one normalized row per chunk; dot product = cosine
         self.embedder = embedder
         self.reranker = reranker
         self.bm25 = BM25Okapi([tokenize(c.text) for c in chunks])
@@ -94,17 +97,15 @@ class Retriever:
         if not chunks:
             raise RuntimeError(f"No usable documents found in {config.DATA_DIR}.")
         vectors = embedder.encode([c.text for c in chunks])
-        index = faiss.IndexFlatIP(vectors.shape[1])   # inner product on normalized vectors = cosine
-        index.add(vectors)
         if save:
             config.INDEX_DIR.mkdir(exist_ok=True)
-            faiss.write_index(index, str(INDEX_FILE))
+            np.save(INDEX_FILE, vectors)
             CHUNKS_FILE.write_text(json.dumps([c.to_dict() for c in chunks], ensure_ascii=False, indent=1),
                                    encoding="utf-8")
             MANIFEST_FILE.write_text(json.dumps({"fingerprint": data_fingerprint(),
                                                  "embed_model": embedder.model_name,
                                                  "chunks": len(chunks)}, indent=1))
-        return cls(chunks, index, embedder, reranker), report
+        return cls(chunks, vectors, embedder, reranker), report
 
     @classmethod
     def load_or_build(cls, embedder=None, reranker=None) -> "Retriever":
@@ -116,7 +117,7 @@ class Retriever:
             manifest = json.loads(MANIFEST_FILE.read_text())
             if manifest.get("fingerprint") == data_fingerprint():
                 chunks = [Chunk(**c) for c in json.loads(CHUNKS_FILE.read_text(encoding="utf-8"))]
-                return cls(chunks, faiss.read_index(str(INDEX_FILE)), embedder, reranker)
+                return cls(chunks, np.load(INDEX_FILE), embedder, reranker)
             print("Data changed since the last build: rebuilding the index...")
         retriever, report = cls.build(embedder, reranker)
         for warning in report.warnings():
@@ -150,9 +151,9 @@ class Retriever:
         n = len(self.chunks)
         pool = min(pool, n)
 
-        dense_scores, dense_ids = self.index.search(self.embedder.encode([semantic_q], is_query=True), n)
-        dense_by_id = {int(i): float(s) for s, i in zip(dense_scores[0], dense_ids[0]) if i != -1}
-        dense_rank = [int(i) for i in dense_ids[0][:pool] if i != -1]
+        dense_scores = self.vectors @ self.embedder.encode([semantic_q], is_query=True)[0]
+        dense_by_id = {i: float(s) for i, s in enumerate(dense_scores)}
+        dense_rank = [int(i) for i in np.argsort(-dense_scores)[:pool]]
 
         tokens = tokenize(keyword_q)
         bm25_scores = self.bm25.get_scores(tokens) if tokens else np.zeros(n)

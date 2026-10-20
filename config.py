@@ -10,6 +10,7 @@ load_dotenv()
 BASE_DIR = Path(__file__).resolve().parent
 DATA_DIR = BASE_DIR / "data"            # your documents (.pdf, .docx, .md, .txt)
 INDEX_DIR = BASE_DIR / "index"          # generated search index
+MODEL_DIR = BASE_DIR / "models"         # downloaded search models (cached)
 LOG_DIR = BASE_DIR / "logs"             # question log
 PROMPT_FILE = BASE_DIR / "prompts" / "system_prompt.txt"
 
@@ -46,7 +47,8 @@ MAX_TOKENS = 1200
 EMBED_MODEL = "BAAI/bge-small-en-v1.5"  # small, fast, 512-token window, runs on free CPU
 QUERY_PREFIX = "Represent this sentence for searching relevant passages: "
 USE_RERANKER = os.getenv("USE_RERANKER", "true").lower() == "true"
-RERANK_MODEL = "cross-encoder/ms-marco-MiniLM-L6-v2"  # reads question + chunk together (~90 MB)
+MODEL_THREADS = int(os.getenv("MODEL_THREADS", "0")) or None   # None = use all CPU cores
+RERANK_MODEL = "Xenova/ms-marco-MiniLM-L-6-v2"  # reads question + chunk together (~80 MB)
 RERANK_MIN_SCORE = 0.01   # 0..1 relevance; chunks below this are dropped...
 RERANK_MIN_KEEP = 3       # ...but the best few are always kept
 
