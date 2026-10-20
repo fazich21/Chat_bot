@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+/* dark: utilities follow the theme toggle (data-theme on <html>) */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+/* ── Design tokens: "Margalla dusk" ─────────────────────────────────── */
+:root {
+  --mist: #eef2ef;      /* page background */
+  --paper: #f8faf8;     /* raised surfaces: input, menus */
+  --ink: #142420;       /* main text */
+  --pine: #1e5b4a;      /* accent: buttons, links, focus */
+  --pine-tint: #dbe8e2; /* user message background */
+  --moss: #5d6f68;      /* secondary text */
+  --ridge: #c9d8d1;     /* lines, borders, contours */
+  --danger: #a3402b;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --mist: #0e1714; --paper: #15211d; --ink: #e4ece8; --pine: #6cc4a1;
+    --pine-tint: #1c3029; --moss: #8fa39b; --ridge: #26362f; --danger: #e48a72;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --mist: #0e1714; --paper: #15211d; --ink: #e4ece8; --pine: #6cc4a1;
+  --pine-tint: #1c3029; --moss: #8fa39b; --ridge: #26362f; --danger: #e48a72;
+  color-scheme: dark;
+}
+
+@theme {
+  --color-mist: var(--mist);
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-pine: var(--pine);
+  --color-pine-tint: var(--pine-tint);
+  --color-moss: var(--moss);
+  --color-ridge: var(--ridge);
+  --color-danger: var(--danger);
+  --font-display: "Bricolage Grotesque Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Schibsted Grotesk Variable", ui-sans-serif, system-ui, sans-serif;
+}
+
+html, body, #root { height: 100%; }
+body {
+  background: var(--mist);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer base {
+  :focus-visible { outline: 2px solid var(--pine); outline-offset: 2px; border-radius: 6px; }
+  ::selection { background: var(--pine-tint); }
+}
+
+/* ── Contour lines: the one orchestrated motion ─────────────────────── */
+.contour path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: draw 2.4s cubic-bezier(.3,.6,.2,1) forwards;
+}
+@keyframes draw { to { stroke-dashoffset: 0; } }
+
+/* streaming caret, placed after the last word */
+.answer.streaming > :last-child:not(ul):not(ol)::after,
+.answer.streaming > :is(ul, ol):last-child > li:last-child::after {
+  content: "";
+  display: inline-block;
+  width: .5em; height: 1.05em;
+  margin-left: 2px;
+  vertical-align: -.15em;
+  background: var(--pine);
+  border-radius: 2px;
+  animation: blink 1s steps(2, start) infinite;
+}
+@keyframes blink { to { visibility: hidden; } }
+
+.thinking span {
+  display: inline-block; width: 6px; height: 6px; border-radius: 50%;
+  background: var(--moss); margin-right: 4px;
+  animation: rise 1.2s ease-in-out infinite;
+}
+.thinking span:nth-child(2) { animation-delay: .15s; }
+.thinking span:nth-child(3) { animation-delay: .3s; }
+@keyframes rise { 0%, 80%, 100% { opacity: .3; transform: none; } 40% { opacity: 1; transform: translateY(-3px); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .contour path { animation: none; stroke-dashoffset: 0; }
+  .answer.streaming > *::after, .answer.streaming li::after, .thinking span { animation: none; }
+}
+
+/* ── Answer typography ──────────────────────────────────────────────── */
+.answer { max-width: 68ch; }
+.answer > * { margin: 0; }
+.answer > * + * { margin-top: .85em; }
+.answer > p:has(> strong:only-child) { margin-top: 1.2em; }   /* group label like **Professional** */
+.answer > p:has(> strong:only-child) + :is(ul, ol) { margin-top: .45em; }
+.answer strong { font-weight: 650; color: var(--ink); }
+.answer ul, .answer ol { padding-left: 1.2em; }
+.answer ul { list-style: none; padding-left: 0; }
+.answer ul > li { position: relative; padding-left: 1.15em; }
+.answer ul > li::before {
+  content: ""; position: absolute; left: 0; top: .68em;
+  width: .5em; height: 2px; border-radius: 2px; background: var(--pine);
+}
+.answer ol { list-style: decimal; }
+.answer li + li { margin-top: .4em; }
+.answer a { color: var(--pine); text-decoration: underline; text-underline-offset: 3px; }
+.answer h1, .answer h2, .answer h3 { font-family: var(--font-display); font-weight: 650; font-size: 1.1em; }
+.answer code { font-size: .9em; background: var(--pine-tint); padding: .1em .35em; border-radius: 5px; }
+
+/* Grouped answer boxes (e.g. Professional / Personal): label on its own line, detail below */
+.group-list ul > li { padding-left: 0; color: var(--moss); font-size: 15px; line-height: 1.5; }
+.group-list ul > li::before { display: none; }
+.group-list li > strong:first-child { display: block; color: var(--ink); font-size: 16px; }
+.group-list li + li { margin-top: .7em; }
